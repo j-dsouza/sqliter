@@ -32,10 +32,9 @@ pub fn handle_meta_command(command: MetaCommandType) -> Result<String, String> {
     match command {
         MetaCommandType::Exit => std::process::exit(0),
         MetaCommandType::Help => Ok(format!(
-            "{}{}{}{}",
+            "{}{}{}",
             "Special commands:\n",
             ".help - Display this message\n",
-            ".ast <QUERY> - Show the abstract syntax tree for QUERY.\n",
             ".exit - Quits this application"
         )),
         MetaCommandType::Unknown => Err(format!(

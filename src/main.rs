@@ -1,4 +1,5 @@
 mod parser;
+mod sqliter;
 
 use std::io;
 use std::io::Write;
